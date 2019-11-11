@@ -36,7 +36,7 @@
                     <div class="panel-body">
                         <form role="form" action="/" method="POST">
                             <div class="form-group">
-                                <input class="form-control" placeholder="fetch URL" id="link" name="link" type="text" autofocus>
+                                <input class="form-control" placeholder="fetch URL" id="link" name="link" type="url" autofocus>
                             </div>
 
                             <!-- <div class="checkbox">
@@ -70,23 +70,6 @@
     <!-- Custom Theme JavaScript -->
     <script src="{{ url_for('static', filename='dist/js/script.js')}}"></script>
 
-<script>
-
-    function submitLink(){
-        console.log('fjalsfjsak');
-        const link = document.getElementById('link').value;
-        axios.post(`/api/v1/fetch/${link}`)
-                .then(res =>{
-                    if(res){
-
-                        window.alert(msg || 'Booking placed successfully')
-                    }
-                }).catch(err => {
-
-                 console.log('err')
-                })
-     }
-</script>
 </body>
 
 </html>
