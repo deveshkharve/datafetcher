@@ -16,3 +16,4 @@ def fetchUrl(link):
             return res.status_code, None
     except Exception as e:
         logger.error(e)
+        return 500, 'Error Occured while fetching data'

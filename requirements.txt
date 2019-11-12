@@ -1,3 +1,5 @@
 redis
 requests
 flask_cors
+flask_assets
+pymysql
